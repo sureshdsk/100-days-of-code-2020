@@ -13,11 +13,11 @@ class AsyncFetch:
             async with session.get(url, params=params, ssl=False) as response:
                 return await response.json()
 
-    async def main(self, counter):
+    async def main(self, count):
         start = time.time()
         async with aiohttp.ClientSession() as session:
             tasks = []
-            for c in range(counter):
+            for c in range(count):
                 tasks.append(
                     self.fetch(session, 'https://httpbin.org/get', params={'q': c})
                 )
@@ -26,13 +26,13 @@ class AsyncFetch:
 
             return [result['args'] for result in results]
 
-    def run(self):
+    def run(self, count):
         try:
-            r = self.loop.run_until_complete(self.main(100))
+            r = self.loop.run_until_complete(self.main(count))
             print(r)
         finally:
             self.loop.close()
 
 if __name__ == '__main__':
     fetch = AsyncFetch()
-    fetch.run()
+    fetch.run(int(sys.argv[1]))
