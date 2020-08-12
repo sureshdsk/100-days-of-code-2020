@@ -8,13 +8,12 @@ source venv/bin/activate
 ## install dependancies
 
 ```
-pip install -r requirements.txt
+pip install databases
+pip install 'databases[postgresql]'
 ```
 
 ## run 
 ```
-python test_async_read_file.py <PATH TO CSV FILE>
-
-python test_async_read_file.py data/mock_data.csv
+python test_pg_create_table.py
 ```
 
