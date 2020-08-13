@@ -1,4 +1,4 @@
-# Async File Reader
+# Insert large volume of data into postgres with COPY command
 
 ## create virtualenv
 ```
@@ -14,8 +14,6 @@ pip install -r requirements.txt
 
 ## run 
 ```
-python test_async_read_file.py <PATH TO CSV FILE>
-
-python test_async_read_file.py data/mock_data.csv
+python import_csv_pg_copy_csv.py <path to csv>
 ```
 
