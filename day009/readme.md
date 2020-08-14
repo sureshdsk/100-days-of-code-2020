@@ -1,4 +1,4 @@
-# Insert large volume of data into postgres with async 
+# Insert data into postgres with async 
 
 ## create virtualenv
 ```
