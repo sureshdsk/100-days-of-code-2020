@@ -7,6 +7,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^9.8.6",
     "next": "latest",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
