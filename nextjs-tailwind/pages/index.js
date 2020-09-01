@@ -1,12 +1,14 @@
 import DestinationCard from '../components/DestinationCard'
+import Navbar from '../components/Navbar'
+
 
 function IndexPage({popularDestinations}) {
   return (
     <>
+      <Navbar/>
       <div className="bg-gray-100 flex">
         <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
           <div className="xl:max-w-lg xl:ml-auto">
-            <img className="h-10" src="/img/logo.svg" alt="Workcation" />
             <img className="mt-6 rounded-lg shadow-xl sm:mt-8 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden" src="/img/beach-work.jpg" alt="Woman workcationing on the beach" />
             <h1 className="mt-6 text-2xl font-bold text-gray-900 leading-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
               You can work from anywhere.
@@ -33,7 +35,7 @@ function IndexPage({popularDestinations}) {
               { 
                 popularDestinations.map((destination, index) => {
                   return (
-                    <div className="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
+                    <div key={index} className="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3">
                       <DestinationCard key={destination.city} destination={destination}/>
                     </div>
                   )
