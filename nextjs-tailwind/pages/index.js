@@ -24,7 +24,7 @@ function IndexPage({popularDestinations}) {
           </div>
         </div>
         <div className="hidden lg:block lg:w-1/2 lg:relative">
-          <img className="absolute inset-0 h-full w-full object-cover object-center" src="/img/beach-work.jpg" alt="Woman workcationing on the beach" />
+          <img className="absolute inset-0 h-full w-full object-cover object-center z-0" src="/img/beach-work.jpg" alt="Woman workcationing on the beach" />
         </div>
       </div>
       <div>
