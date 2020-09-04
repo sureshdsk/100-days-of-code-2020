@@ -1,8 +1,12 @@
+import {useState} from "react";
 import DestinationCard from '../components/DestinationCard'
 import Navbar from '../components/Navbar'
+import BookModal from '../components/BookModal'
 
 
 function IndexPage({popularDestinations}) {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <Navbar/>
@@ -18,7 +22,7 @@ function IndexPage({popularDestinations}) {
               Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
             </p>
             <div className="mt-4 sm:mt-6">
-              <a href="#" className="btn btn-indigo shadow-lg sm:text-base">Book your escape</a>
+              <a href="#" className="btn btn-indigo shadow-lg sm:text-base" onClick={() => setShowModal(true)}>Book your escape</a>
               <a href="#" className="ml-2 btn btn-gray sm:text-base">Learn more</a>
             </div>
           </div>
@@ -44,6 +48,9 @@ function IndexPage({popularDestinations}) {
           </div>
         </div>
       </div>
+      
+      <BookModal showModal={showModal} setShowModal={setShowModal} />
+
     </>
   )
 } 
