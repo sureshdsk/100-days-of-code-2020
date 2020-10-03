@@ -1,3 +1,3 @@
 # 100-days-of-code-2020
 
-[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/yashkim24/StackOverflow-assistant-bot/?ref=repository-badge)
+[![DeepSource](https://deepsource.io/gh/sureshdsk/100-days-of-code-2020.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/sureshdsk/100-days-of-code-2020/?ref=repository-badge)
